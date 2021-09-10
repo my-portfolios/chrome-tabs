@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { useChromeTabs } from "./hooks";
+import { useChromeTabs } from "../dist/hooks";
 import '../css/chrome-tabs.css';
 
 function Tab() {
@@ -19,7 +19,7 @@ function Tab() {
       <ChromeTabs />
       <button
         onClick={() =>
-          addTab({ id: `id-${Date.now()}`, title: `새탭새탭새탭새탭새탭새탭`, favicon: false, url:'a.html' })
+          addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })
         }
       >
         탭추가

@@ -48,8 +48,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook",
-    "prepublishOnly": "tsc"
+    "build-storybook": "build-storybook"
   },
   "publishConfig": {
     "access": "public"

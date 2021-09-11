@@ -5,10 +5,6 @@
 1. use hooks
    
 ```js
-import {useState} from 'react';
-import { useChromeTabs } from "@bhyoon1110/react-chrome-tabs";
-import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
-
 function Tab() {
   const [tabs, setTabs] = useState([]);
   const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
@@ -21,12 +17,13 @@ function Tab() {
         removeTab(tabId);
     },
   });
-  console.log(ChromeTabs());
-  console.log(ChromeTabsPages());
+  const ChromeTabsPagesStyle = {
+    height: '50vw'
+  };
   return (
     <div>
       <ChromeTabs />
-      <ChromeTabsPages />
+      <ChromeTabsPages style={ChromeTabsPagesStyle} />
       <button
         onClick={() =>
           addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })
@@ -81,10 +78,6 @@ export const parameters = {
 
 stories/Test.tsx
 ```js
-import {useState} from 'react';
-import { useChromeTabs } from "@bhyoon1110/react-chrome-tabs";
-import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
-
 function Tab() {
   const [tabs, setTabs] = useState([]);
   const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
@@ -97,12 +90,13 @@ function Tab() {
         removeTab(tabId);
     },
   });
-  console.log(ChromeTabs());
-  console.log(ChromeTabsPages());
+  const ChromeTabsPagesStyle = {
+    height: '50vw'
+  };
   return (
     <div>
       <ChromeTabs />
-      <ChromeTabsPages />
+      <ChromeTabsPages style={ChromeTabsPagesStyle} />
       <button
         onClick={() =>
           addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })

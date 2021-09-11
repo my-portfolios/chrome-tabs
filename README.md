@@ -151,8 +151,8 @@ add content
     "@types/lodash.isequal": "^4.5.5",
     "@types/react": "^17.0.8",
     "babel-loader": "^8.2.2",
-    "react": "16",
-    "react-dom": "16"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 
   "scripts": {

@@ -14,8 +14,6 @@ function Tab() {
         removeTab(tabId);
     },
   });
-  console.log(ChromeTabs());
-  console.log(ChromeTabsPages());
   return (
     <div>
       <ChromeTabs />

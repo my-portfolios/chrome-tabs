@@ -283,6 +283,9 @@ var ChromeTabs = /** @class */ (function () {
         tabEl.parentNode.removeChild(tabEl);
         tabElCtt.parentNode.removeChild(tabElCtt);
         this.emit("tabRemove", { tabEl: tabEl });
+
+        if(!this.hasActiveTab() && this.tabEls.length > 0) this.setCurrentTab(this.tabEls[0]);
+
         this.cleanUpPreviouslyDraggedTabs();
         this.layoutTabs();
         this.setupDraggabilly();

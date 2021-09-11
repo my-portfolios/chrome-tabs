@@ -1,6 +1,6 @@
 {
   "name": "@bhyoon1110/react-chrome-tabs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Chrome-style tabs in HTML/CSS/JS",
   "main": "dist/index.js",
   "files": [

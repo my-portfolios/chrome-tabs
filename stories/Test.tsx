@@ -14,10 +14,13 @@ function Tab() {
         removeTab(tabId);
     },
   });
+  const ChromeTabsPagesStyle = {
+    height: '50vw'
+  };
   return (
     <div>
       <ChromeTabs />
-      <ChromeTabsPages />
+      <ChromeTabsPages style={ChromeTabsPagesStyle} />
       <button
         onClick={() =>
           addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })

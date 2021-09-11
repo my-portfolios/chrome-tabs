@@ -49,7 +49,7 @@ var ChromeTabsPageWrapper = react_1.forwardRef(function (props, ref) {
     return (
         react_1.default.createElement(
             "div", 
-            { className: "chrome-tabs-pages", style: { "--tab-content-margin": "9px" } },
+            Object.assign({ className: "chrome-tabs-pages", style: Object.assign({ "--tab-content-margin": "9px"}, {...props.style}, {}) }, {...props}, {}),
             react_1.default.createElement("div", { className: "chrome-tabs-content-pages" })
         )
     );
@@ -178,8 +178,8 @@ function useChromeTabs(listeners) {
     var ChromeTabs = react_1.useCallback(function () {
         return react_1.default.createElement(ChromeTabsWrapper, { ref: ref });
     }, []);
-    var ChromeTabsPages = react_1.useCallback(function () {
-        return react_1.default.createElement(ChromeTabsPageWrapper, { ref: ref });
+    var ChromeTabsPages = react_1.useCallback(function (props) {
+        return react_1.default.createElement(ChromeTabsPageWrapper, { ref: ref, ...props });
     }, []);
     return {
         ChromeTabs: ChromeTabs,

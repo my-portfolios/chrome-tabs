@@ -11,7 +11,7 @@ import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
 
 function Tab() {
   const [tabs, setTabs] = useState([]);
-  const { ChromeTabs, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
+  const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
     onTabActivated: (tabId) => {
       console.log('active:', tabId);
       activeTab(tabId);
@@ -21,9 +21,12 @@ function Tab() {
         removeTab(tabId);
     },
   });
+  console.log(ChromeTabs());
+  console.log(ChromeTabsPages());
   return (
     <div>
       <ChromeTabs />
+      <ChromeTabsPages />
       <button
         onClick={() =>
           addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })
@@ -79,12 +82,12 @@ export const parameters = {
 stories/Test.tsx
 ```js
 import {useState} from 'react';
-import { useChromeTabs } from "../dist/hooks";
-import '../css/chrome-tabs.css';
+import { useChromeTabs } from "@bhyoon1110/react-chrome-tabs";
+import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
 
 function Tab() {
   const [tabs, setTabs] = useState([]);
-  const { ChromeTabs, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
+  const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
     onTabActivated: (tabId) => {
       console.log('active:', tabId);
       activeTab(tabId);
@@ -94,9 +97,12 @@ function Tab() {
         removeTab(tabId);
     },
   });
+  console.log(ChromeTabs());
+  console.log(ChromeTabsPages());
   return (
     <div>
       <ChromeTabs />
+      <ChromeTabsPages />
       <button
         onClick={() =>
           addTab({ id: `id-${Date.now()}`, title: `새탭`, favicon: false, url:'a.html' })

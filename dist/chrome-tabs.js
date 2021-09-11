@@ -109,7 +109,7 @@ var ChromeTabs = /** @class */ (function () {
     });
     Object.defineProperty(ChromeTabs.prototype, "tabContentElCtt", {
         get: function () {
-            return this.el.querySelector(".chrome-tabs-content-pages");
+            return document.querySelector(".chrome-tabs-content-pages");
         },
         enumerable: false,
         configurable: true
@@ -251,7 +251,7 @@ var ChromeTabs = /** @class */ (function () {
     });
     Object.defineProperty(ChromeTabs.prototype, "activeTabElCtt", {
         get: function () {
-            return this.el.querySelector(".chrome-tabs-content-page[active]");
+            return document.querySelector(".chrome-tabs-content-page[active]");
         },
         enumerable: false,
         configurable: true

@@ -10,6 +10,7 @@ export declare type Listeners = {
 };
 export declare function useChromeTabs(listeners: Listeners): {
     ChromeTabs: () => JSX.Element;
+    ChromeTabsPages: () => JSX.Element;
     ref: React.MutableRefObject<ChromeTabsClz | null>;
     addTab: (tab: TabProperties) => void;
     updateTab: (tabId: string, tab: TabProperties) => void;

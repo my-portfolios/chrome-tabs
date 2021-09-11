@@ -41,7 +41,15 @@ var ChromeTabsWrapper = react_1.forwardRef(function (props, ref) {
         react_1.default.createElement(
             "div", 
             { ref: ref, className: "chrome-tabs", style: { "--tab-content-margin": "9px" } },
-            react_1.default.createElement("div", { className: "chrome-tabs-content" }),
+            react_1.default.createElement("div", { className: "chrome-tabs-content" })
+        )
+    );
+});
+var ChromeTabsPageWrapper = react_1.forwardRef(function (props, ref) {
+    return (
+        react_1.default.createElement(
+            "div", 
+            { className: "chrome-tabs-pages", style: { "--tab-content-margin": "9px" } },
             react_1.default.createElement("div", { className: "chrome-tabs-content-pages" })
         )
     );
@@ -170,8 +178,12 @@ function useChromeTabs(listeners) {
     var ChromeTabs = react_1.useCallback(function () {
         return react_1.default.createElement(ChromeTabsWrapper, { ref: ref });
     }, []);
+    var ChromeTabsPages = react_1.useCallback(function () {
+        return react_1.default.createElement(ChromeTabsPageWrapper, { ref: ref });
+    }, []);
     return {
         ChromeTabs: ChromeTabs,
+        ChromeTabsPages: ChromeTabsPages,
         ref: chromeTabsRef,
         addTab: addTab,
         updateTab: updateTab,

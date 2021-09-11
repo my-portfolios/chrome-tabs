@@ -6,8 +6,8 @@
    
 ```js
 import {useState} from 'react';
-import { Tabs } from '@bhyoon1110/react-chrome-tabs';
-import '../css/chrome-tabs.css';
+import { useChromeTabs } from "@bhyoon1110/react-chrome-tabs";
+import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
 
 function Tab() {
   const [tabs, setTabs] = useState([]);

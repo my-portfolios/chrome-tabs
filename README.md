@@ -1,5 +1,11 @@
 # React Chrome Tabs
 
+## Install
+
+```shell
+npm i @bhyoon1110/react-chrome-tabs
+```
+
 ## Usage
 
 1. use hooks
@@ -9,7 +15,6 @@ function Tab() {
   const [tabs, setTabs] = useState([]);
   const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
     onTabActivated: (tabId) => {
-      console.log('active:', tabId);
       activeTab(tabId);
     },
     onTabReorder: (tabId, fromIndex, toIndex) => {},
@@ -18,7 +23,7 @@ function Tab() {
     },
   });
   const ChromeTabsPagesStyle = {
-    height: '50vw'
+    height: '30vw'
   };
   return (
     <div>

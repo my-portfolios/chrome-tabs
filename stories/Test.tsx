@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { useChromeTabs } from "../dist/hooks";
 import '../css/chrome-tabs.css';
 

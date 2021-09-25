@@ -83,11 +83,14 @@ export const parameters = {
 
 stories/Test.tsx
 ```js
+import { useState } from 'react';
+import { useChromeTabs } from "@bhyoon1110/react-chrome-tabs";
+import '@bhyoon1110/react-chrome-tabs/css/chrome-tabs.css';
+
 function Tab() {
   const [tabs, setTabs] = useState([]);
   const { ChromeTabs, ChromeTabsPages, addTab, updateTab, activeTab ,removeTab } = useChromeTabs({
     onTabActivated: (tabId) => {
-      console.log('active:', tabId);
       activeTab(tabId);
     },
     onTabReorder: (tabId, fromIndex, toIndex) => {},
